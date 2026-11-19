@@ -656,6 +656,10 @@ def build(bazel, arguments):
 
     bazel_command_line.set_split_swiftmodules(arguments.enableParallelSwiftmoduleGeneration)
 
+    # Vision Gram: сборка без профилей — IPA подписывается при установке (Feather)
+    if arguments.disableProvisioningProfiles:
+        bazel_command_line.set_disable_provisioning_profiles()
+
     bazel_command_line.invoke_build()
 
     # App Store review rejects a non-public libicucore function, and nothing before it does (ICUImportCheck.py).
@@ -1050,6 +1054,12 @@ if __name__ == '__main__':
         ],
         required=True,
         help='Build configuration'
+    )
+    buildParser.add_argument(
+        '--disableProvisioningProfiles',
+        action='store_true',
+        default=False,
+        help='Vision Gram: build without provisioning profiles (the IPA is signed later, at install time).'
     )
     buildParser.add_argument(
         '--enableParallelSwiftmoduleGeneration',
