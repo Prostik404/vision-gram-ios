@@ -1,122 +1,191 @@
 {
-  "fill" : "system-light",
-  "groups" : [
+  "fill": "system-light",
+  "groups": [
     {
-      "blend-mode" : "normal",
-      "blur-material" : 1,
-      "layers" : [
+      "blend-mode": "normal",
+      "layers": [
         {
-          "blend-mode-specializations" : [
+          "blend-mode-specializations": [
             {
-              "value" : "normal"
+              "value": "normal"
             },
             {
-              "appearance" : "dark",
-              "value" : "normal"
+              "appearance": "dark",
+              "value": "normal"
             }
           ],
-          "fill-specializations" : [
+          "fill-specializations": [
             {
-              "appearance" : "dark",
-              "value" : "automatic"
-            }
-          ],
-          "glass" : true,
-          "image-name" : "Plane.svg",
-          "name" : "Plane",
-          "position-specializations" : [
+              "value": {
+                "linear-gradient": [
+                  "srgb:1.00000,1.00000,1.00000,1.00000",
+                  "srgb:1.00000,1.00000,1.00000,1.00000"
+                ]
+              }
+            },
             {
-              "idiom" : "watchOS",
-              "value" : {
-                "scale" : 1.35,
-                "translation-in-points" : [
-                  0,
-                  0
+              "appearance": "dark",
+              "value": {
+                "linear-gradient": [
+                  "srgb:1.00000,1.00000,1.00000,1.00000",
+                  "srgb:1.00000,1.00000,1.00000,1.00000"
                 ]
               }
             }
-          ]
+          ],
+          "glass": false,
+          "image-name": "Wordmark.svg",
+          "name": "Wordmark"
         },
         {
-          "blend-mode-specializations" : [
+          "blend-mode-specializations": [
             {
-              "value" : "normal"
+              "value": "normal"
             },
             {
-              "appearance" : "dark",
-              "value" : "normal"
+              "appearance": "dark",
+              "value": "normal"
             }
           ],
-          "fill-specializations" : [
+          "fill-specializations": [
             {
-              "value" : {
-                "linear-gradient" : [
-                  "display-p3:0.21569,0.68627,0.89020,1.00000",
-                  "srgb:0.11373,0.57647,0.82353,1.00000"
+              "value": {
+                "linear-gradient": [
+                  "srgb:1.00000,1.00000,1.00000,1.00000",
+                  "srgb:1.00000,1.00000,1.00000,1.00000"
                 ]
               }
             },
             {
-              "appearance" : "dark",
-              "value" : {
-                "automatic-gradient" : "srgb:0.00000,0.47843,1.00000,1.00000"
-              }
-            }
-          ],
-          "glass" : true,
-          "hidden-specializations" : [
-            {
-              "value" : false
-            },
-            {
-              "idiom" : "watchOS",
-              "value" : false
-            }
-          ],
-          "image-name" : "Oval.svg",
-          "name" : "Oval",
-          "position-specializations" : [
-            {
-              "idiom" : "watchOS",
-              "value" : {
-                "scale" : 2,
-                "translation-in-points" : [
-                  0,
-                  0
+              "appearance": "dark",
+              "value": {
+                "linear-gradient": [
+                  "srgb:1.00000,1.00000,1.00000,1.00000",
+                  "srgb:1.00000,1.00000,1.00000,1.00000"
                 ]
               }
             }
-          ]
-        }
-      ],
-      "lighting" : "combined",
-      "position-specializations" : [
+          ],
+          "glass": false,
+          "image-name": "Star.svg",
+          "name": "Star"
+        },
         {
-          "idiom" : "watchOS",
-          "value" : {
-            "scale" : 1,
-            "translation-in-points" : [
-              0,
-              0
-            ]
-          }
+          "blend-mode-specializations": [
+            {
+              "value": "normal"
+            },
+            {
+              "appearance": "dark",
+              "value": "normal"
+            }
+          ],
+          "fill-specializations": [
+            {
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.75294,0.54510,1.00000,1.00000",
+                  "srgb:0.49020,0.23529,0.94902,1.00000"
+                ]
+              }
+            },
+            {
+              "appearance": "dark",
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.75294,0.54510,1.00000,1.00000",
+                  "srgb:0.49020,0.23529,0.94902,1.00000"
+                ]
+              }
+            }
+          ],
+          "glass": false,
+          "image-name": "VRight.svg",
+          "name": "VRight"
+        },
+        {
+          "blend-mode-specializations": [
+            {
+              "value": "normal"
+            },
+            {
+              "appearance": "dark",
+              "value": "normal"
+            }
+          ],
+          "fill-specializations": [
+            {
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.35294,0.62745,1.00000,1.00000",
+                  "srgb:0.23922,0.38824,0.96078,1.00000"
+                ]
+              }
+            },
+            {
+              "appearance": "dark",
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.35294,0.62745,1.00000,1.00000",
+                  "srgb:0.23922,0.38824,0.96078,1.00000"
+                ]
+              }
+            }
+          ],
+          "glass": false,
+          "image-name": "VLeft.svg",
+          "name": "VLeft"
+        },
+        {
+          "blend-mode-specializations": [
+            {
+              "value": "normal"
+            },
+            {
+              "appearance": "dark",
+              "value": "normal"
+            }
+          ],
+          "fill-specializations": [
+            {
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.07059,0.10196,0.30980,1.00000",
+                  "srgb:0.11765,0.05882,0.30196,1.00000"
+                ]
+              }
+            },
+            {
+              "appearance": "dark",
+              "value": {
+                "linear-gradient": [
+                  "srgb:0.07059,0.10196,0.30980,1.00000",
+                  "srgb:0.11765,0.05882,0.30196,1.00000"
+                ]
+              }
+            }
+          ],
+          "glass": false,
+          "image-name": "Background.svg",
+          "name": "Background"
         }
       ],
-      "shadow" : {
-        "kind" : "layer-color",
-        "opacity" : 1
+      "lighting": "combined",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
       },
-      "specular" : true,
-      "translucency" : {
-        "enabled" : false,
-        "value" : 1
+      "specular": false,
+      "translucency": {
+        "enabled": false,
+        "value": 1
       }
     }
   ],
-  "supported-platforms" : {
-    "circles" : [
+  "supported-platforms": {
+    "circles": [
       "watchOS"
     ],
-    "squares" : "shared"
+    "squares": "shared"
   }
 }

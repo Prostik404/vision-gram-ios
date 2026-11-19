@@ -19,6 +19,7 @@ enum SettingsSection: Int, CaseIterable {
     case phone
     case accounts
     case myProfile
+    case visionGram // MARK: Vision Gram
     case wallet
     case proxy
     case apps
@@ -151,6 +152,11 @@ func settingsItems(data: PeerInfoScreenData?, context: AccountContext, presentat
         
         items[.myProfile]!.append(PeerInfoScreenDisclosureItem(id: 0, text: presentationData.strings.Settings_MyProfile, icon: PresentationResourcesSettings.myProfile, action: {
             interaction.openSettings(.profile)
+        }))
+        
+        // MARK: Vision Gram
+        items[.visionGram]!.append(PeerInfoScreenDisclosureItem(id: 0, text: "Vision Gram", icon: visionGramSettingsIcon, action: {
+            interaction.openSettings(.visionGram)
         }))
         
         if WalletConfiguration.with(appConfiguration: context.currentAppConfiguration.with { $0 }).isAvailable {
