@@ -1,7 +1,7 @@
 // MARK: Vision Gram
 //
 // Главный экран мода Vision Gram (Настройки → Vision Gram).
-// Этап 4: оболочка меню. Разделы наполняются на этапах 5–8.
+// Этап 4: оболочка меню. Разделы «Подарки» и «Внешний вид» наполняются на следующих этапах.
 
 import Foundation
 import UIKit
@@ -15,8 +15,6 @@ import UndoUI
 
 let visionGramSettingsIcon: UIImage? = renderSettingsIcon(name: "Item List/Icons/VisionGram", backgroundColors: [UIColor(rgb: 0x7D3CF2), UIColor(rgb: 0x3D63F5)])
 
-private let visionGramChatsIcon: UIImage? = renderSettingsIcon(name: "Item List/Icons/Brush", backgroundColors: [UIColor(rgb: 0x0A84FF)])
-private let visionGramGhostIcon: UIImage? = renderSettingsIcon(name: "Item List/Icons/Privacy", backgroundColors: [UIColor(rgb: 0x34C759)])
 private let visionGramAppearanceIcon: UIImage? = renderSettingsIcon(name: "Item List/Icons/Appearance", backgroundColors: [UIColor(rgb: 0xFF9F0A)])
 
 private final class VisionGramSettingsArguments {
@@ -35,8 +33,6 @@ private enum VisionGramSettingsSection: Int32 {
 private enum VisionGramSettingsEntry: ItemListNodeEntry, Equatable {
     case header(String, String)
     case gifts(String, String)
-    case chats(String, String)
-    case ghost(String, String)
     case appearance(String, String)
     case footer(String)
 
@@ -44,7 +40,7 @@ private enum VisionGramSettingsEntry: ItemListNodeEntry, Equatable {
         switch self {
         case .header:
             return VisionGramSettingsSection.header.rawValue
-        case .gifts, .chats, .ghost, .appearance, .footer:
+        case .gifts, .appearance, .footer:
             return VisionGramSettingsSection.sections.rawValue
         }
     }
@@ -55,14 +51,10 @@ private enum VisionGramSettingsEntry: ItemListNodeEntry, Equatable {
             return 0
         case .gifts:
             return 1
-        case .chats:
-            return 2
-        case .ghost:
-            return 3
         case .appearance:
-            return 4
+            return 2
         case .footer:
-            return 5
+            return 3
         }
     }
 
@@ -79,14 +71,6 @@ private enum VisionGramSettingsEntry: ItemListNodeEntry, Equatable {
             return ItemListDisclosureItem(presentationData: presentationData, systemStyle: .glass, icon: PresentationResourcesSettings.premiumGift, title: title, label: text, labelStyle: .multilineDetailText, sectionId: self.section, style: .blocks, disclosureStyle: .arrow, action: {
                 arguments.openSection(title)
             })
-        case let .chats(title, text):
-            return ItemListDisclosureItem(presentationData: presentationData, systemStyle: .glass, icon: visionGramChatsIcon, title: title, label: text, labelStyle: .multilineDetailText, sectionId: self.section, style: .blocks, disclosureStyle: .arrow, action: {
-                arguments.openSection(title)
-            })
-        case let .ghost(title, text):
-            return ItemListDisclosureItem(presentationData: presentationData, systemStyle: .glass, icon: visionGramGhostIcon, title: title, label: text, labelStyle: .multilineDetailText, sectionId: self.section, style: .blocks, disclosureStyle: .arrow, action: {
-                arguments.openSection(title)
-            })
         case let .appearance(title, text):
             return ItemListDisclosureItem(presentationData: presentationData, systemStyle: .glass, icon: visionGramAppearanceIcon, title: title, label: text, labelStyle: .multilineDetailText, sectionId: self.section, style: .blocks, disclosureStyle: .arrow, action: {
                 arguments.openSection(title)
@@ -101,9 +85,7 @@ private func visionGramSettingsEntries() -> [VisionGramSettingsEntry] {
     var entries: [VisionGramSettingsEntry] = []
     entries.append(.header("Vision Gram", "Версия 0.1 · тестовая сборка"))
     entries.append(.gifts("Подарки", "Фантом-Stars, TON и визуальные подарки"))
-    entries.append(.chats("Чаты", "Визуальный редактор звонков и сообщений"))
-    entries.append(.ghost("Ghost", "Скрытые функции и защита"))
-    entries.append(.appearance("Внешний вид", "Бейджик, цвета и иконка приложения"))
+    entries.append(.appearance("Внешний вид", "Бейджик, иконка, скрытие номера"))
     entries.append(.footer("Разделы наполняются по этапам. Все визуальные элементы мода отмечены меткой DEMO."))
     return entries
 }
